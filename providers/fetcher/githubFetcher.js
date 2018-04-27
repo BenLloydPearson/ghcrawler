@@ -265,8 +265,8 @@ class GitHubFetcher {
 
   _getTypeDetails(type) {
     const result = {
-      orgs: { tokenTraits: ['admin'] },
-      org: { tokenTraits: [['admin'], ['public']] },
+      orgs: { tokenTraits: ['read'] },
+      org: { tokenTraits: [['read'], ['public']] },
       repos: { tokenTraits: [['admin'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
       repo: { tokenTraits: [['admin'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
       teams: { tokenTraits: ['admin'] },
