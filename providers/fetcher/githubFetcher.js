@@ -267,20 +267,20 @@ class GitHubFetcher {
     const result = {
       orgs: { tokenTraits: ['read'] },
       org: { tokenTraits: [['read'], ['public']] },
-      repos: { tokenTraits: [['admin'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
-      repo: { tokenTraits: [['admin'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
-      teams: { tokenTraits: ['admin'] },
-      team: { tokenTraits: ['admin'] },
-      members: { tokenTraits: ['admin'] },
-      events: { tokenTraits: ['admin'] },
-      collaborators: { tokenTraits: ['admin'], headers: { Accept: 'application/vnd.github.korra-preview' } },
+      repos: { tokenTraits: [['read'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
+      repo: { tokenTraits: [['read'], ['public']], headers: { Accept: 'application/vnd.github.mercy-preview+json' } },
+      teams: { tokenTraits: ['read'] },
+      team: { tokenTraits: ['read'] },
+      members: { tokenTraits: ['read'] },
+      events: { tokenTraits: ['read'] },
+      collaborators: { tokenTraits: ['read'], headers: { Accept: 'application/vnd.github.korra-preview' } },
       reviews: { headers: { Accept: 'application/vnd.github.black-cat-preview+json' } },
       review: { headers: { Accept: 'application/vnd.github.black-cat-preview+json' } },
       reactions: { headers: { Accept: 'application/vnd.github.squirrel-girl-preview' } },
-      clones: { tokenTraits: ['admin'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
-      referrers: { tokenTraits: ['admin'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
-      views: { tokenTraits: ['admin'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
-      paths: { tokenTraits: ['admin'], headers: { Accept: 'application/vnd.github.spiderman-preview' } }
+      clones: { tokenTraits: ['read'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
+      referrers: { tokenTraits: ['read'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
+      views: { tokenTraits: ['read'], headers: { Accept: 'application/vnd.github.spiderman-preview' } },
+      paths: { tokenTraits: ['read'], headers: { Accept: 'application/vnd.github.spiderman-preview' } }
     }[type];
     return result ? result : {};
   }
